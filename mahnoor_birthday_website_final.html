@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Happy Birthday Mahnoor 🎀</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&family=Pacifico&display=swap');
+:root{--pink:#ff72a7;--deep:#c92d70;--light:#fff0f7}
+*{box-sizing:border-box}body{margin:0;color:#74234b;font-family:Nunito,sans-serif;background:linear-gradient(135deg,#ffe8f3,#ffc6df 50%,#fff0f7);overflow-x:hidden}
+header{position:sticky;top:0;z-index:5;background:#fff9fccc;backdrop-filter:blur(10px);padding:15px 6%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #ffc1dc}
+.brand{font-weight:900;font-size:1.2rem}nav{display:flex;gap:18px;flex-wrap:wrap}nav a{color:#85234f;text-decoration:none;font-weight:700}
+.hero{max-width:1100px;margin:35px auto;padding:25px;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:30px}
+.kicker{background:#fff8;border:1px solid white;border-radius:50px;padding:9px 16px;display:inline-block}
+h1{font:clamp(3rem,8vw,6rem) Pacifico,cursive;color:#d92d78;line-height:1.12;margin:22px 0;text-shadow:3px 4px #fff}h1 span{display:block;color:#ff6ca5}
+p{line-height:1.8}.message{font-size:1.08rem;max-width:520px}
+.btn{border:0;background:linear-gradient(135deg,#ff91bd,#ff5b9e);color:white;padding:13px 22px;border-radius:50px;font-weight:900;font-size:1rem;box-shadow:0 7px 0 #d94382;cursor:pointer;margin:8px 8px 8px 0;transition:.2s}.btn:hover{transform:translateY(-3px)}.btn.secondary{background:#fff;color:#c62b70;box-shadow:0 5px 0 #f4a6ca}
+.cakebox{background:#fff8;border:2px solid white;border-radius:35px;padding:22px;text-align:center;box-shadow:0 18px 50px #d84c8b22}.cake{font-size:9rem;filter:drop-shadow(0 12px 8px #e47aa555);animation:bob 3s ease-in-out infinite}@keyframes bob{50%{transform:translateY(-9px)}}
+section{max-width:1100px;margin:25px auto;padding:20px}.section-title{text-align:center;font:2.4rem Pacifico;color:#d92d78;margin-bottom:25px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:#fff9;border:2px solid white;border-radius:28px;padding:25px;text-align:center;box-shadow:0 12px 35px #c73e7c15}.emoji{font-size:3rem}.card h3{color:#c92d70}.reveal{background:#fff;border:2px dashed #ff8bb9;border-radius:20px;padding:20px;margin-top:15px}
+.photos{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}.photo{width:150px;height:150px;border-radius:20px;border:3px solid white;background:#ffe0ef;display:grid;place-items:center;overflow:hidden;color:#bc4c7d}.photo img{width:100%;height:100%;object-fit:cover}
+.funbox{background:#fff9;border:2px solid white;border-radius:28px;padding:25px;text-align:center}.funbox h3{color:#c92d70}.big{font-size:1.5rem;font-weight:900;min-height:45px}
+footer{text-align:center;padding:35px;color:#a33b6e}.heart{position:fixed;bottom:-30px;pointer-events:none;animation:float 5s linear forwards;z-index:9}@keyframes float{to{transform:translateY(-110vh) rotate(25deg);opacity:0}}
+@media(max-width:750px){header{flex-direction:column;gap:10px}.hero{grid-template-columns:1fr;text-align:center;margin-top:15px}.message{margin:auto}.cards{grid-template-columns:1fr}.cake{font-size:7rem}nav{justify-content:center}}
+</style></head>
+<body>
+<header><div class="brand">🎀 Birthday wishes for <span style="color:#d92d78">Mahnoor</span></div><nav><a href="#home">Home</a><a href="#memories">Memories</a><a href="#surprise">Surprise</a><a href="#countdown">Countdown</a><a href="#quiz">Sister quiz</a><a href="#letter">Letter 💌</a><a href="#fun">Fun zone</a></nav></header>
+<main>
+<div class="hero" id="home"><div>
+<div class="kicker">💗 A little page made with lots of love</div><div style="margin-top:12px;color:#b82c70;font-weight:900">AKA: My Dramebaaz • My Zubaan-daraaz Behn • Chalako • Drama Queen 👑</div>
+<h1>Happy Birthday <span>Mahnoor!</span></h1>
+<div class="message">May Allah always keep you happy, healthy, and successful. May your life be full of love, laughter, beautiful moments, and all the happiness your heart can hold. You deserve the sweetest things in the world! 🌷</div>
+<p><b>To my favorite person & sweetest sister—</b> I'm so lucky to have you in my life. Love you endlessly! 💕</p>
+<button class="btn" onclick="document.querySelector('#surprise').scrollIntoView({behavior:'smooth'})">Open your surprise 🎁</button>
+<button class="btn secondary" onclick="hearts()">Send some hearts 💖</button>
+</div><div class="cakebox"><div class="cake">🎂</div><h2>Make a wish, birthday girl!</h2><p>Today is all about YOU ✨</p><div>🌸 🎀 🌸</div></div></div>
+
+<section id="surprise"><h2 class="section-title">A little surprise 🎁</h2><div class="cards">
+<div class="card"><div class="emoji">🎁</div><h3>Open your gift</h3><p>A tiny gift, a giant amount of love.</p><button class="btn" onclick="gift()">Open Gift 💝</button><div id="giftmsg" class="reveal" hidden>Surprise!! Your gift is unlimited hugs, lots of duas, and a sister who loves you SO much! 💗</div></div>
+<div class="card" id="memories"><div class="emoji">📸</div><h3>Our memories</h3><p>Add your favorite sister pictures here!</p><input type="file" accept="image/*" multiple onchange="showPics(event)" style="max-width:100%;color:#a33b6e"><div class="photos" id="pics"></div><small>Photos stay in this browser session.</small></div>
+<div class="card" id="cake"><div class="emoji">🧁</div><h3>Birthday cake</h3><p>Make a wish and blow the candles!</p><button class="btn" onclick="wish()">Make a Wish ✨</button><div id="wishmsg" class="reveal" hidden>🌟 Wish sent! May it come true, Mahnoor! 🌟</div></div></div></section>
+
+<section id="countdown"><h2 class="section-title">Countdown to 25 December 🎄🎂</h2><div class="funbox"><div class="big" id="countdownText">Counting down to Mahnoor’s day… 💗</div><p>Save the date: 25 December!</p></div></section><section id="quiz"><h2 class="section-title">Sister quiz 🤭</h2><div class="funbox"><h3>Who’s the biggest drama queen?</h3><button class="btn" onclick="quizAnswer()">Reveal answer 😜</button><div id="quizout" class="reveal" hidden>Obviously… MAHNOOR! 👑😂 (Don’t tell her I said that!)</div></div></section><section id="fun"><h2 class="section-title">Lil fun zone 😜</h2><div class="cards">
+<div class="funbox"><div class="emoji">🎯</div><h3>How much are you loved?</h3><button class="btn" onclick="love()">Tap to find out</button><div class="big" id="loveout"></div></div>
+<div class="funbox"><div class="emoji">😂</div><h3>Sister challenge</h3><p id="challenge">Ready for a silly challenge?</p><button class="btn" onclick="challenge()">Give me one!</button></div>
+<div class="funbox"><div class="emoji">💌</div><h3>Compliment machine</h3><p class="big" id="compliment">You're a whole bundle of sunshine!</p><button class="btn" onclick="compliment()">Another one 💕</button></div></div></section>
+<section><div class="funbox"><h2>Dear Mahnoor 💗</h2><p>Thank you for being YOU, for all the little moments, laughs, and memories. I pray this new year of your life brings peace, blessings, and dreams coming true. Happy birthday, my sweetest sister!</p><div style="font-size:2rem">🎀 🌷 💖 🌷 🎀</div></div></section>
+<section id="letter"><h2 class="section-title">A letter for my favorite drama queen 💌</h2><div class="funbox" style="text-align:left;max-width:850px;margin:auto">
+<h2 style="text-align:center;color:#d92d78">Dear Mahnoor, my Dramebaaz 🎀</h2>
+<p>Happy Birthday to my <b>zubaan-daraaz behn, chalako, drama queen</b> and one of my most favorite people in this whole world! 😂💗</p>
+<p>Honestly, having you as my sister is a whole package deal: unlimited drama, random arguments, silly jokes, loud laughs, and memories I wouldn't trade for anything. Sometimes you are so annoying that I feel like returning you to the universe… but then I remember that the universe might not accept returns, so I guess I'm stuck with you forever. 😭😂</p>
+<p>Jokes apart, I'm genuinely so lucky to have you. You make ordinary days more fun, boring moments more memorable, and our little conversations feel special. Even when we fight or tease each other, please always remember that my love for you never gets smaller—not even when your drama reaches season 100. 🤭</p>
+<p>On your birthday, I pray that Allah fills your life with happiness, health, peace, success, and endless blessings. May every good dream of yours come true, may your smile always stay bright, and may you always have reasons to feel loved. Ameen. 🤍</p>
+<p>Keep being your funny, chaotic, sweet, and wonderfully unique self. Never stop laughing loudly, dreaming big, and being the Mahnoor we all know and love. And please… try to reduce the drama by at least 2%, for the sake of humanity. 😂</p>
+<p><b>Love you more than all our silly fights, more than all the chocolates, and more than words can explain.</b> Thank you for being my sister, my built-in bestie, and my forever partner in random nonsense. 💕</p>
+<p style="text-align:center;font-size:1.2rem"><b>Happy Birthday, Mahnoor! 🎂👑</b><br>Forever your loving sister,<br><span style="font-family:Pacifico;color:#d92d78">Your favorite person (obviously 😌) 💗</span></p>
+<div style="font-size:2rem;text-align:center">🎀 🌷 💖 🌷 🎀</div></div></section></main><footer>Made with all my love for Mahnoor • Happy Birthday! 🎂</footer>
+<script>
+function quizAnswer(){document.getElementById("quizout").hidden=false;hearts()}
+function updateCountdown(){let now=new Date();let target=new Date(now.getFullYear(),11,25,0,0,0);if(now>target)target=new Date(now.getFullYear()+1,11,25,0,0,0);let diff=target-now;let d=Math.floor(diff/86400000),h=Math.floor(diff/3600000)%24,m=Math.floor(diff/60000)%60,s=Math.floor(diff/1000)%60;document.getElementById("countdownText").textContent=`${d} days • ${h} hrs • ${m} mins • ${s} secs 💗`;}
+updateCountdown();setInterval(updateCountdown,1000);
+function hearts(){for(let i=0;i<22;i++){let h=document.createElement('div');h.className='heart';h.textContent=['💗','💖','💕','🎀','✨'][Math.floor(Math.random()*5)];h.style.left=Math.random()*100+'vw';h.style.animationDuration=(3+Math.random()*4)+'s';h.style.fontSize=(18+Math.random()*25)+'px';document.body.appendChild(h);setTimeout(()=>h.remove(),7000)}}
+function gift(){document.getElementById('giftmsg').hidden=false;hearts()}
+function wish(){document.getElementById('wishmsg').hidden=false;hearts()}
+function love(){document.getElementById('loveout').textContent=['1000000% 💗','Infinity ♾️','More than all the stars ✨','Too much to measure 🥹'][Math.floor(Math.random()*4)]}
+function challenge(){document.getElementById('challenge').textContent=['Send your sister 3 heart emojis right now 💗','Do your funniest birthday dance 🕺','Say “I am the birthday queen!” 👑','Take a cute selfie together 📸','Demand birthday cake immediately 🍰'][Math.floor(Math.random()*5)]}
+function compliment(){document.getElementById('compliment').textContent=['You make ordinary days magical ✨','Your smile is contagious 🌸','You deserve all the good things 💕','You are loved more than you know 🥹','Certified birthday queen 👑'][Math.floor(Math.random()*5)]}
+function showPics(e){let box=document.getElementById('pics');box.innerHTML='';[...e.target.files].slice(0,8).forEach(f=>{let img=document.createElement('img');img.src=URL.createObjectURL(f);let d=document.createElement('div');d.className='photo';d.appendChild(img);box.appendChild(d)})}
+</script></body></html>
